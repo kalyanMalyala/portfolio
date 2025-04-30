@@ -1,0 +1,588 @@
+/* Global Body Styles */
+body {
+  background: linear-gradient(135deg, #1a237e, #303f9f); /* Dark blue gradient */
+  color: #fff; /* White text color for contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensure the background covers the entire viewport */
+}
+
+/* App Layout */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Heading Styles */
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #cfd7de;
+  font-size: 36px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background for sections */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-of-type(even) {
+  background: linear-gradient(135deg, #dfe7ed, #f0f4f7); /* Light gradient for alternate sections */
+}
+
+section h2 h2 h3{
+  color: #dce7f2;
+}
+
+
+
+/* Scroll Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 1s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+section:nth-child(1) {
+  animation-delay: 0.2s;
+}
+section:nth-child(2) {
+  animation-delay: 0.4s;
+}
+section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Card Styles for Projects, Experience, etc. */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.card p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.card p a {
+  font-weight: bold;
+  color: #0073e6;
+  transition: color 0.3s ease;
+}
+
+.card p a:hover {
+  color: #1a73e8;
+}
+
+/* Tab Navigation Styles */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #ddd;
+  flex-wrap: wrap; /* Allows tabs to wrap on smaller screens */
+  justify-content: center; /* Center-align tabs */
+}
+
+.tab {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  margin: 5px; /* Add some space between tabs */
+}
+
+.tab:hover {
+  color: #0073e6;
+}
+
+.tab.active {
+  color: #0073e6;
+  border-bottom: 2px solid #0073e6;
+}
+
+.tab-content {
+  margin-top: 30px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically on smaller screens */
+  }
+
+  .tab {
+    padding: 15px 25px; /* Increase padding for better clickability */
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .tab {
+    padding: 15px 30px; /* More padding for better mobile experience */
+    font-size: 20px;
+  }
+
+  .tab-content {
+    margin-top: 20px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically */
+  }
+}
+
+/* Education Section */
+.education {
+  margin-top: 40px;
+}
+
+.education h3 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.education li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Experience Section */
+.experience {
+  margin-top: 40px;
+}
+
+.experience h3 {
+  font-size: 24px;
+  color: #34495e;
+}
+
+.experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Skills Section */
+.skills {
+  margin-top: 40px;
+}
+
+.skills h3 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Projects Section */
+.projects {
+  margin-top: 40px;
+}
+
+.projects h3 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Achievements Section */
+.achievements {
+  margin-top: 40px;
+}
+
+.achievements h3 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.achievements ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.achievements li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+
+/* Education Section */
+.education {
+  margin-top: 40px;
+}
+
+.education h3 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.education li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Experience Section */
+.experience {
+  margin-top: 40px;
+}
+
+.experience h3 {
+  font-size: 24px;
+  color: #34495e;
+}
+
+.experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Skills Section */
+.skills {
+  margin-top: 40px;
+}
+
+.skills h3 {
+  font-size: 32px;
+  color: #b6cfe9;
+  margin-bottom: 15px;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills li {
+  font-size: 24px;
+  color: #dde6e5;
+  margin: 10px 0;
+}
+
+/* Projects Section */
+.projects {
+  margin-top: 40px;
+}
+
+.projects h3 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+.projects h4 {
+  font-size: 32px;
+  color: #031220;
+  margin-bottom: 15px;
+}
+
+.projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects li {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Achievements Section */
+.achievements {
+  margin-top: 40px;
+}
+
+.achievements h3 {
+  font-size: 24px;
+  color: #ced3d9;
+  margin-bottom: 15px;
+}
+
+.achievements ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.achievements li {
+  font-size: 26px;
+  color: #efdddd;
+  margin: 10px 0;
+}
+
+/* Contact Container */
+.contact-container {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  color: #fff; /* White text color */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Heading Styles */
+.contact-container h1 {
+  font-size: 36px;
+  color: #f0f3f6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-container p {
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Contact List Styling */
+.contact-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center; /* Center align the list items */
+}
+
+.contact-container ul li {
+  font-size: 26px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.contact-container ul li a {
+  color: #b1bfce;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-container ul li a:hover {
+  color: #dce2e9;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 30px;
+  }
+
+  .contact-container h1 {
+    font-size: 28px;
+  }
+
+  .contact-container p {
+    font-size: 24px;
+  }
+
+  .contact-container ul li {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-container h1 {
+    font-size: 24px;
+  }
+
+  .contact-container p {
+    font-size: 24px;
+  }
+
+  .contact-container ul li {
+    font-size: 24px;
+  }
+}
