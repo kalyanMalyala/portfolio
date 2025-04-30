@@ -14,8 +14,8 @@ function Contact() {
         <li>LinkedIn: <a href="https://www.linkedin.com/in/malyala-kalyan-chakravarthy-goud-844745219/">linkedin.com/in/malyala-kalyan-chakravarthy-goud</a></li>
         <li>Phone: <a href="tel:+971589531656">+971589531656</a></li>
         <li>Location: Dubai, UAE</li>
-        <li>Portfolio: <a href="https://kalyan-malyala.github.io/portfolio/">kalyan-malyala.github.io/portfolio</a></li>
-        <li>Resume: <a href="https://drive.google.com/file/d/1vX0g2j4m3k5x5z5x5x5x5x5x5x5x5/view?usp=sharing">View Resume</a></li>
+        <li>Portfolio: <a href="https://kalyanmalyala.github.io/portfolio/">kalyan-malyala.github.io/portfolio</a></li>
+        <li>Resume: <a href="https://drive.google.com/file/d/173hshUNWakjIAOaBPG8XxEJjESK-mWIz/view?usp=sharing">View Resume</a></li>
       </ul>
       <p>Best regards,</p>
       <p>Kalyan Chakravarthy Malyala</p>
