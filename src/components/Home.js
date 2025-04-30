@@ -16,6 +16,7 @@ function Home() {
   <ul>
     <li><strong>Salesforce Platform Developer I</strong></li>
     <li><strong>Salesforce AI Associate</strong></li>
+    <li><strong>Salesforce Administrator</strong></li>
     <li><strong>Salesforce AgentForce Specialist</strong></li>
   </ul>
 
